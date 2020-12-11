@@ -1,0 +1,40 @@
+.image {
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+  height: 600px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: width 0.3s ease;
+}
+.image:hover .overlay {
+  display: inline-block;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  height: 100%;
+  width: 100%;
+}
+.description {
+  display: none;
+}
+.image:hover .description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  color: white;
+}
