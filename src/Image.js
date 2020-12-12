@@ -1,5 +1,6 @@
 import React from "react";
 import "./Image.css";
+
 function Image({ url, title }) {
   const clickedImage = (e) => {
     window.open(url);
@@ -8,7 +9,7 @@ function Image({ url, title }) {
   //Using the BEM conversion for the namings
   return (
     <div
-      className="image col-sm-12 col-md-6 col-lg-4"
+      className="image col-sm-12 col-md-6 col-lg-4 animate__animated animate__backInUp"
       style={{ backgroundImage: `url(${url})` }}
       onClick={clickedImage}
     >
